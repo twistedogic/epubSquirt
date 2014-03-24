@@ -1,0 +1,20 @@
+{
+  "name": "epubspeedreader",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "epub-parser": "^0.2.4",
+    "express": "^3.4.8",
+    "epub-cache": "^0.1.2",
+    "epub2html": "0.0.10",
+    "epub2web": "^0.1.6",
+    "cheerio": "^0.13.1",
+    "jsdom": "^0.10.3"
+  }
+}
