@@ -76,11 +76,12 @@ converter.parse(process.argv[2], function (err, epubData) {
 
 });
 
-var inject = fs.readFileSync(__dirname + '/spritzBtn.html', 'utf8');
+var inject = fs.readFileSync(__dirname + '/button.html', 'utf8');
 
 app.get('/', function(req, res){
 //   res.send('index.html', {root: __dirname + '/public/' + cacheId + '/OEBPS'});
     res.send(htmlData.htmlNav);
+    console.log('home');
 });
 
 app.get('/OEBPS/:file', function(req, res){
@@ -91,6 +92,7 @@ app.get('/OEBPS/:file', function(req, res){
             $ = cheerio.load(data);
             $('body').prepend(inject);
             res.send($.html());
+	    console.log('Spritz!');
         });
     } else {
         res.sendfile(file, {root: __dirname + '/public/' + cacheId + '/OEBPS'});
